@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <title>Vite App</title>
+</head>
+<body>
+  <div class="min-h-screen bg-gray-800">
+    <div class="bg-gray-700 flex items-center space-x-2 p-2 text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+      </svg>
+      <h1 class="font-medium text-lg">Find Job</h1>
+    </div>
+    <div class="p-4">
+      <div class="flex bg-gray-700 rounded-md overflow-hidden">
+        <div class="flex-grow flex items-center space-x-4 p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input id="search_input" type="text" placeholder="Filter by title" class="flex-grow bg-transparent text-white focus:outline-none">
+        </div>
+        <div class="flex items-center justify-center px-3 transition bg-blue-600 hover:bg-blue-500">
+          <button id="search_btn" type="submit" class="text-sm font-normal text-white">Find job</button>
+        </div>
+      </div>
+      <div class="ml-4 my-1">
+        <p class="text-white text-lg font-medium" data-jobs-counter></p>
+      </div>
+      <div class="grid grid-cols-1 grid-rows-1 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-3 gap-6" data-jobs-container>
+        
+      </div>
+    </div>
+  </div>
+
+  <template data-job-card-template>
+    <div class="h-80 flex flex-col text-white space-y-1 p-4 rounded-md bg-gray-700 transform transition lg:hover:scale-105">
+      <div class="flex justify-between">
+        <img class="h-10 w-10 rounded-md" data-job-card-image src="https://s3-symbol-logo.tradingview.com/facebook--600.png" alt="job logo">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-medium" data-job-card-title>Lead Production Design</h3>
+      <p class="text-sm text-gray-400 break-words flex-grow overflow-hidden" data-job-card-description>Lorema ipsum dolor sit amet consectetur adipisicing elit. Harum a perspiciatis quibusdam aspernatur enim illo qui corporis architecto beatae modi iure labore officiis, molestiae excepturi, sunt rerum reiciendis obcaecati cum?</p>
+      <div class="flex justify-between space-x-3 text-sm">
+        <button class="flex-1 bg-blue-500 py-2 transition rounded-lg hover:bg-blue-400">Apply Now</button>
+        <button class="flex-1 bg-gray-500 py-2 transition rounded-lg text-gray-200 hover:bg-gray-400">Message</button>
+      </div>
+    </div>
+  </template>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
