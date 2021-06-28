@@ -1,6 +1,5 @@
 # find-job-js
-Simple web app for job finding.
-Vite Vanilla based simple web app for job finding.
+Vite Vanilla based simple website for job finding.
 
 ```
 #Used Tools:
